@@ -1,2 +1,0 @@
-
-const { id, name, age, role, phone, address, country, salary } = data;
