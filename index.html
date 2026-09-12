@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee - Portal</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <link rel="shortcut icon" href="https://www.google.com/s2/favicons?domain=mployee.com" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="flex items-center justify-center w-full min-h-screen p-4 font-sans bg-slate-50">
+    <!-- Login Card Container -->
+    <section id="login" class="w-full max-w-md p-6 sm:py-13 sm:px-10">
+      <!-- Header -->
+      <h1 class="mb-2 text-2xl font-bold sm:text-3xl text-slate-900">Employee Portal</h1>
+      <p class="mb-8 text-sm text-slate-600 sm:text-base">Enter your operational credentials to gain access.</p>
+
+      <!-- Form -->
+      <form class="space-y-6" onsubmit="event.preventDefault()">
+        <!-- Employee Name Field -->
+        <div>
+          <label for="name" class="block mb-2 text-sm font-medium text-slate-600">Employee Name</label>
+          <div class="relative flex items-center">
+            <span class="absolute pointer-events-none left-3 text-slate-400">
+              <i class="fa-solid fa-user"></i>
+            </span>
+            <input
+              class="w-full pl-10 pr-4 transition-all border-b-2 h-11 bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-sky-900/20 focus:border-b-2"
+              type="text"
+              id="name"
+              autofocus
+              placeholder="Sarah Jenkins"
+            />
+          </div>
+        </div>
+
+        <!-- Password Field -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label for="password" class="text-sm font-medium text-slate-600">Password</label>
+            <a href="#" class="text-xs font-medium text-blue-600 sm:text-sm hover:underline">Forgot password?</a>
+          </div>
+          <div class="relative flex items-center">
+            <span class="absolute pointer-events-none left-3 text-slate-400">
+              <i class="fa-solid fa-lock"></i>
+            </span>
+            <input
+              class="w-full pl-10 pr-4 transition-all border-b-2 h-11 bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-sky-900/20 focus:border-b-2"
+              type="password"
+              id="password"
+              placeholder="•••••••"
+            />
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button
+          id="submit"
+          class="w-full bg-sky-950 hover:bg-sky-900 text-white font-medium text-base h-12 rounded-lg cursor-pointer transition-all active:translate-y-0.5 shadow-sm"
+        >
+          Access Records
+        </button>
+      </form>
+    </section>
+    <i
+      id="close"
+      class="fa-solid fa-xmark absolute top-10 right-10 text-4xl text-slate-600 active:translate-y-1 cursor-pointer hidden!"
+    ></i>
+    <section id="content" class="flex items-center justify-center hidden w-full max-w-md"></section>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
